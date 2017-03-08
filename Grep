@@ -1,6 +1,9 @@
 man grep
 
-gr
+Basic command line:
+grep ‘[regex]’
+if matches the regex will print the input. Otherwise won’t
+
 ep comes from the ed (Unix text editor) search command "global regular expression print".
 --used when you are looking for text in a document
 two other variants: egrep and fgrep
@@ -10,6 +13,12 @@ Quantifiers:
 + (star): one or more
 ? (question mark): optional character, equivalent to {0,1}
 
+Shorthands:
+[[:album:]]: \w
+[[:space:]]: \s
+\W and \S are negation of above
+
+
 Backreferences:
 refer to a match that was made earlier in a regex
 \n: backreference specifier, n is a number, looks for nth subexpression
@@ -18,4 +27,4 @@ refer to a match that was made earlier in a regex
 Family Differences:
 grep - uses regular expressions for pattern matching
 fgrep - file grep, only matches fixed strings but can get search strings from a file
-egrep - extended grep, uses a more powerful set of RE but not support backreferencing
+egrep - extended grep, uses a more powerful set of RE but not support back-referencing
