@@ -1,1 +1,21 @@
+man grep
 
+gr
+ep comes from the ed (Unix text editor) search command "global regular expression print".
+--used when you are looking for text in a document
+two other variants: egrep and fgrep
+
+Quantifiers:
+* (star): zero or more
++ (star): one or more
+? (question mark): optional character, equivalent to {0,1}
+
+Backreferences:
+refer to a match that was made earlier in a regex
+\n: backreference specifier, n is a number, looks for nth subexpression
+
+
+Family Differences:
+grep - uses regular expressions for pattern matching
+fgrep - file grep, only matches fixed strings but can get search strings from a file
+egrep - extended grep, uses a more powerful set of RE but not support backreferencing
